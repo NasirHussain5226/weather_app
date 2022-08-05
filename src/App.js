@@ -31,7 +31,7 @@ function App() {
     max-w-screen-sm shadow-xl shadow-gray-500 rounded-3xl'>
 
      <TopButtons setQuery = {setQuery}/>
-     <Inputs setQuery ={setQuery} />
+     <Inputs setQuery ={setQuery} units ={units} setUnits={setUnits} />
 
 
     {/* Only load the changes when weather exist  */}
