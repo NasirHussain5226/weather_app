@@ -13,18 +13,19 @@ import {useEffect, useState } from "react";
 function App() {
 
   const [query, setQuery] = useState({q: 'islamabad'})
+  const [units, setUnits] = useState('metric')
   const [weather, setWeather] =useState(null)
 
   useEffect(() => {
     const fetchWeather = async () =>{
 
-      getFormattedWeatherData({...query}).then(data =>{
+      getFormattedWeatherData({...query, units}).then(data =>{
         setWeather(data);
       });
   
     };
     fetchWeather();
-  }, [query]);
+  }, [query, units]);
   return (
     <div className=' mx-auto bg-gradient-to-b from-gray-700 to-black py-4 mt-5
     max-w-screen-sm shadow-xl shadow-gray-500 rounded-3xl'>

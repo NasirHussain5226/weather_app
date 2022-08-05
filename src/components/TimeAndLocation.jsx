@@ -13,7 +13,7 @@ function TimeAndLocation({weather: {
                 {`${name},${country}`}
             </p>
         </div>
-        <div className='flex flex-row items-center justify-center space-x-1 text-white text-sm '>
+        <div className='flex flex-row items-center justify-center flex-wrap space-x-1 text-white text-sm '>
             <UilSun />
             <p className="font-light">
             Rise: 
