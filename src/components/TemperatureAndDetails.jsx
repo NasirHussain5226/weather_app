@@ -2,7 +2,7 @@ import React from 'react';
 import { formatToLocalTime, iconUrlFromCode } from '../services/weatherServices';
 
 function TemperatureandDetails({weather: {
-   dt, details, icon, temp,speed, humidity, feels_like, timezone,pressure
+   dt, details, icon, temp, speed, humidity, feels_like, timezone, pressure
 }}) {
   return (
     <div className='flex justify-evenly items-center flex-wrap'>
@@ -19,24 +19,24 @@ function TemperatureandDetails({weather: {
             </div>
         </div>
        
-        <div className='flex justify-center items-center bg-gradient-to-br from-gray-700 to-black shadow shadow-gray-600 px-3 py-5 rounded'>
+        <div className='flex justify-center items-center bg-gradient-to-br from-gray-700 to-black shadow shadow-gray-600 px-3 rounded'>
             <div className='flex flex-col mx-2'>
-                <div className='text-center pb-5'>
+                <div className='text-center py-3'>
                     <p className='text-white text-sm'>Pressure</p>
                     <p className='text-white text-xs'>{`${pressure.toFixed()}Pa`}</p>
                 </div>
-                <div className='text-center pb-5'>
+                <div className='text-center py-3'>
                     <p className='text-white text-sm'>Humidity</p>
                     <p className='text-white text-xs'>{`${humidity.toFixed()}%`}</p>
                 </div>
             </div>
 
             <div className='flex flex-col'>
-                <div className='text-center pb-5'>
+                <div className='text-center py-3 px-3'>
                         <p className='text-white text-sm'>Wind</p>
                         <p className='text-white text-xs'>{`${speed.toFixed()}km/h`}</p>
                 </div>
-                <div className='text-center pb-5'>
+                <div className='text-center py-3 px-3'>
                         <p className='text-white text-sm'>Feels</p>
                         <p className='text-white text-xs'>{`${feels_like.toFixed()}°C`}</p>
                 </div>
