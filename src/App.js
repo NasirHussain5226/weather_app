@@ -27,24 +27,23 @@ function App() {
     fetchWeather();
   }, [query, units]);
   return (
-    <div className=' mx-auto bg-gradient-to-b from-gray-700 to-black py-4 mt-5
-    max-w-screen-sm shadow-xl shadow-gray-500 rounded-3xl'>
+    <div className='mx-2'>
+      <div className=' mx-auto bg-gradient-to-b from-gray-700 to-black py-4 my-0 md:my-3
+      max-w-screen-sm shadow-xl shadow-gray-500 rounded-2xl'>
 
      <TopButtons setQuery = {setQuery}/>
      <Inputs setQuery ={setQuery} units ={units} setUnits={setUnits} />
 
 
-    {/* Only load the changes when weather exist  */}
-    {weather && (
+      {/* Only load the changes when weather exist  */}
+      {weather && (
       <div>
         <TimeAndLocation weather={weather}/>
         <TemperatureandDetails weather={weather}/>
         <DailyForeCast  title="Daily Forecast" items={weather.daily}/>
       </div>
-    )
-    }
-
-    
+      )}
+    </div>
     </div>
   );
 }
